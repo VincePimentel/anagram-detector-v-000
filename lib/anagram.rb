@@ -7,10 +7,8 @@ class Anagram
   end
 
   def match(anagram)
-    anagram.collect do |word|
+    anagram.map do |word|
       @word.split("").sort == word.split("").sort ? word : nil
     end.compact
-
   end
-
 end
